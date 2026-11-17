@@ -1,0 +1,23 @@
+{
+  "case_id": 5,
+  "audio_file": "case_005.wav",
+  "speaker_segments": [
+    {
+      "text": "阿托伐他汀钙片，厂家这边想从辉瑞改成乐普",
+      "start": 1000,
+      "end": 9000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0005N00500050005E0005",
+    "generic_ref": "阿托伐他汀钙片",
+    "field_name": "enterprise_code",
+    "cur_value": "辉瑞",
+    "proposed_value": "乐普",
+    "evidence_index": 0,
+    "ambiguous": false,
+    "unresolved_speaker": false
+  },
+  "notes": "厂家变更"
+}

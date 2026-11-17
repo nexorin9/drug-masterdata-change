@@ -1,0 +1,197 @@
+{
+  "items": [
+    {
+      "drug_code": "XC0001N00100010001E0001",
+      "generic_name": "阿莫西林胶囊",
+      "dosage_form": "胶囊",
+      "spec": "0.25g",
+      "manufacturer": "石药",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0002N00200020002E0002",
+      "generic_name": "阿莫西林胶囊",
+      "dosage_form": "胶囊",
+      "spec": "0.5g",
+      "manufacturer": "石药",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0003N00300030003E0003",
+      "generic_name": "头孢克肟片",
+      "dosage_form": "片",
+      "spec": "0.1g",
+      "manufacturer": "广州白云山",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0004N00400040004E0004",
+      "generic_name": "二甲双胍片",
+      "dosage_form": "片",
+      "spec": "0.5g",
+      "manufacturer": "格华止",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0005N00500050005E0005",
+      "generic_name": "阿托伐他汀钙片",
+      "dosage_form": "片",
+      "spec": "20mg",
+      "manufacturer": "辉瑞",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0006N00600060006E0006",
+      "generic_name": "氨氯地平片",
+      "dosage_form": "片",
+      "spec": "5mg",
+      "manufacturer": "诺华",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0007N00700070007E0007",
+      "generic_name": "奥美拉唑肠溶胶囊",
+      "dosage_form": "胶囊",
+      "spec": "20mg",
+      "manufacturer": "阿斯利康",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0008N00800080008E0008",
+      "generic_name": "布洛芬缓释胶囊",
+      "dosage_form": "胶囊",
+      "spec": "0.3g",
+      "manufacturer": "中美史克",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0009N00900090009E0009",
+      "generic_name": "对乙酰氨基酚片",
+      "dosage_form": "片",
+      "spec": "0.5g",
+      "manufacturer": "扑热息痛",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0010N01000100010E0010",
+      "generic_name": "阿奇霉素片",
+      "dosage_form": "片",
+      "spec": "0.25g",
+      "manufacturer": "辉瑞",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0011N01100110011E0011",
+      "generic_name": "左氧氟沙星片",
+      "dosage_form": "片",
+      "spec": "0.5g",
+      "manufacturer": "第一三共",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0012N01200120012E0012",
+      "generic_name": "氯雷他定片",
+      "dosage_form": "片",
+      "spec": "10mg",
+      "manufacturer": "开瑞坦",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0013N01300130013E0013",
+      "generic_name": "缬沙坦胶囊",
+      "dosage_form": "胶囊",
+      "spec": "80mg",
+      "manufacturer": "诺华",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0014N01400140014E0014",
+      "generic_name": "恩替卡韦片",
+      "dosage_form": "片",
+      "spec": "0.5mg",
+      "manufacturer": "施贵宝",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0015N01500150015E0015",
+      "generic_name": "瑞舒伐他汀钙片",
+      "dosage_form": "片",
+      "spec": "10mg",
+      "manufacturer": "阿斯利康",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0016N01600160016E0016",
+      "generic_name": "格列美脲片",
+      "dosage_form": "片",
+      "spec": "2mg",
+      "manufacturer": "赛诺菲",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0017N01700170017E0017",
+      "generic_name": "雷贝拉唑钠肠溶片",
+      "dosage_form": "片",
+      "spec": "20mg",
+      "manufacturer": "卫材",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0018N01800180018E0018",
+      "generic_name": "塞来昔布胶囊",
+      "dosage_form": "胶囊",
+      "spec": "0.2g",
+      "manufacturer": "辉瑞",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0019N01900190019E0019",
+      "generic_name": "多潘立酮片",
+      "dosage_form": "片",
+      "spec": "10mg",
+      "manufacturer": "西安杨森",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0020N02000200020E0020",
+      "generic_name": "莫西沙星片",
+      "dosage_form": "片",
+      "spec": "0.4g",
+      "manufacturer": "拜耳",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0021N02100210021E0021",
+      "generic_name": "阿莫西林胶囊",
+      "dosage_form": "胶囊",
+      "spec": "0.25g",
+      "manufacturer": "华北制药",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0022N02200220022E0022",
+      "generic_name": "阿莫西林颗粒",
+      "dosage_form": "颗粒",
+      "spec": "0.125g",
+      "manufacturer": "石药",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0023N02300230023E0023",
+      "generic_name": "注射用头孢曲松钠",
+      "dosage_form": "注射剂",
+      "spec": "1g",
+      "manufacturer": "罗氏",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    },
+    {
+      "drug_code": "XC0024N02400240024E0024",
+      "generic_name": "维生素C片",
+      "dosage_form": "片",
+      "spec": "0.1g",
+      "manufacturer": "华北制药",
+      "updated_at": "2026-11-09T09:00:00+08:00"
+    }
+  ],
+  "synced_at": "2026-11-09T09:12:00+08:00"
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": 10,
+  "audio_file": "case_010.wav",
+  "speaker_segments": [
+    {
+      "text": "（噪声）规格改为1.0",
+      "start": 0,
+      "end": 8000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0004N00400040004E0004",
+    "generic_ref": "",
+    "field_name": "spec_pack_code",
+    "cur_value": "0.5g",
+    "proposed_value": "1.0g",
+    "evidence_index": 0,
+    "ambiguous": false
+  },
+  "notes": "背景噪声"
+}

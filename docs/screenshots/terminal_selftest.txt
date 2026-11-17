@@ -1,0 +1,7 @@
+$ python -m dmchange selftest --case samples/scenarios/case_001.json
+=== selftest 可核对条目行 ===
+药品码: XC0014N01400140014E0014
+字段名: spec_pack_code
+现值: 0.5mg  →  应为值: 1mg
+状态: draft  守门: ok 守门通过
+依据: [8000-15000ms] spk1: 恩替卡韦片的规格不是0.5毫克，是1毫克。

@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "file": "corpus_001.wav",
+      "duration_s": 37,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000001",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_002.wav",
+      "duration_s": 44,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000002",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_003.wav",
+      "duration_s": 51,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000003",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_004.wav",
+      "duration_s": 58,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000004",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_005.wav",
+      "duration_s": 65,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000005",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_006.wav",
+      "duration_s": 72,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000006",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_007.wav",
+      "duration_s": 79,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000007",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_008.wav",
+      "duration_s": 86,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000008",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_009.wav",
+      "duration_s": 33,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000009",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_010.wav",
+      "duration_s": 40,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "000000000000000000000000000000000000000000000000000000000000000a",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_011.wav",
+      "duration_s": 47,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "000000000000000000000000000000000000000000000000000000000000000b",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_012.wav",
+      "duration_s": 54,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "000000000000000000000000000000000000000000000000000000000000000c",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_013.wav",
+      "duration_s": 61,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "000000000000000000000000000000000000000000000000000000000000000d",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_014.wav",
+      "duration_s": 68,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "000000000000000000000000000000000000000000000000000000000000000e",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_015.wav",
+      "duration_s": 75,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "000000000000000000000000000000000000000000000000000000000000000f",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_016.wav",
+      "duration_s": 82,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000010",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_017.wav",
+      "duration_s": 89,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000011",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_018.wav",
+      "duration_s": 36,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000012",
+      "has_hotword": true
+    },
+    {
+      "file": "corpus_019.wav",
+      "duration_s": 43,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000013",
+      "has_hotword": false
+    },
+    {
+      "file": "corpus_020.wav",
+      "duration_s": 50,
+      "source": "AISHELL-1/WenetSpeech子集(占位)",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000014",
+      "has_hotword": true
+    }
+  ],
+  "stats": {
+    "count": 20,
+    "total_duration_s": 1170
+  }
+}

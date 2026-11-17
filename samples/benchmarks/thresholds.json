@@ -1,0 +1,5 @@
+{
+  "max_segment_e2e_ms": 5000,
+  "min_cer_delta": 0.0,
+  "min_hit_rate_delta": 0.0
+}

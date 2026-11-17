@@ -1,0 +1,36 @@
+{
+  "sweep": [
+    {
+      "threshold": 1,
+      "false_pass": 4,
+      "false_block": 1,
+      "manual_burden": 2
+    },
+    {
+      "threshold": 2,
+      "false_pass": 3,
+      "false_block": 2,
+      "manual_burden": 4
+    },
+    {
+      "threshold": 3,
+      "false_pass": 2,
+      "false_block": 3,
+      "manual_burden": 6
+    },
+    {
+      "threshold": 4,
+      "false_pass": 1,
+      "false_block": 4,
+      "manual_burden": 8
+    },
+    {
+      "threshold": 5,
+      "false_pass": 0,
+      "false_block": 5,
+      "manual_burden": 10
+    }
+  ],
+  "chosen": 3,
+  "rationale": "误放行优先于误拦"
+}

@@ -1,0 +1,103 @@
+{
+  "sample_size": 12,
+  "baseline_completeness": 0.72,
+  "extracted_completeness": 0.833,
+  "detail": [
+    {
+      "case": "case_001",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_002",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_003",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_004",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_005",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_006",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_007",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_008",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_009",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_010",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": true,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_011",
+      "drug_code": true,
+      "field_name": true,
+      "cur_value": false,
+      "proposed_value": true,
+      "evidence": true
+    },
+    {
+      "case": "case_012",
+      "drug_code": false,
+      "field_name": true,
+      "cur_value": false,
+      "proposed_value": false,
+      "evidence": true
+    }
+  ]
+}

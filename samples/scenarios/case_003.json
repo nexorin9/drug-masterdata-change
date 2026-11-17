@@ -1,0 +1,23 @@
+{
+  "case_id": 3,
+  "audio_file": "case_003.wav",
+  "speaker_segments": [
+    {
+      "text": "那个阿莫西林胶囊写成片剂了，改成片剂",
+      "start": 1000,
+      "end": 8000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0001N00100010001E0001",
+    "generic_ref": "阿莫西林胶囊",
+    "field_name": "dosage_form_code",
+    "cur_value": "胶囊",
+    "proposed_value": "片剂",
+    "evidence_index": 0,
+    "ambiguous": true,
+    "unresolved_speaker": false
+  },
+  "notes": "通用名多命中歧义"
+}

@@ -1,0 +1,28 @@
+{
+  "case_id": 11,
+  "audio_file": "case_011.wav",
+  "speaker_segments": [
+    {
+      "text": "先说规格是20毫克",
+      "start": 0,
+      "end": 4000,
+      "speaker": "spk0"
+    },
+    {
+      "text": "不对，规格改成40毫克，厂家也改成乐普",
+      "start": 4000,
+      "end": 12000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0005N00500050005E0005",
+    "generic_ref": "",
+    "field_name": "spec_pack_code",
+    "cur_value": "20mg",
+    "proposed_value": "40mg",
+    "evidence_index": 1,
+    "ambiguous": false
+  },
+  "notes": "连续两次纠正"
+}

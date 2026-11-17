@@ -1,0 +1,281 @@
+/* PySide6 主题样式表：双花括号占位符由 theme.render_qss() 注入。
+   覆盖 10+ 控件：QPushButton/QLineEdit/QComboBox/QTableView/QHeaderView/
+   QTabBar/QScrollBar/QToolTip/QCheckBox/QProgressBar/QLabel/QTextEdit。
+
+   两条平台差异，改 QSS 前先读（uis/UI_BASELINE.md 第五、八节）：
+   1. 焦点环：Qt 的 QSS 不支持 CSS outline 属性，outline: 2px solid ... 是死代码，
+      焦点不可见。Qt 的做法是在 :focus 状态改 border，故本表所有可聚焦控件
+      用 border 变化画焦点环（等价 focus-visible）。
+   2. 动效降级：Web 端等价写法是 @media (prefers-reduced-motion: reduce) { ... }，
+      QSS 没有媒体查询，Qt 端由 theme.set_reduced_motion(True) 承载，
+      theme.duration_ms() 把所有动效时长归零（只保留状态切换本身）。
+   3. 数字对齐：Web 端等价写法是 font-variant-numeric: tabular-nums，
+      QSS 无此属性，Qt 端由 theme.numeric_font()/theme.code_font() 以
+      OpenType 'tnum' 特性施加在 QTableView 的 FontRole 上。
+   所有色值/间距/字号一律走令牌占位符（由 theme.render_qss() 启动时注入），
+   本文件不出现裸色值与裸字号。 */
+
+QWidget {
+    background: {{surface}};
+    color: {{text}};
+    font-family: {{font_family}};
+    font-size: {{font_base}}px;
+}
+
+QMainWindow, QDialog {
+    background: {{surface}};
+}
+
+QWidget[role="card"] {
+    background: {{card}};
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+}
+
+/* ---------- 按钮：四态 + 焦点环 + 语义角色 ---------- */
+QPushButton {
+    background: {{primary}};
+    color: {{on_primary}};
+    border: 1px solid transparent;
+    border-radius: {{radius}}px;
+    padding: {{space_2}}px {{space_4}}px;
+    min-height: {{control_height}}px;
+    font-weight: 500;
+}
+QPushButton:hover { background: {{primary_hover}}; }
+QPushButton:pressed { background: {{primary_pressed}}; padding-top: {{space_2}}px; }
+/* 焦点环：改 border 画 2px 焦点色（Qt 不认 outline） */
+QPushButton:focus {
+    border: 2px solid {{focus_ring}};
+    padding: {{space_1}}px {{space_3}}px;
+}
+QPushButton:disabled { background: {{border}}; color: {{text_secondary}}; }
+QPushButton[loading="true"] { background: {{text_secondary}}; color: {{on_primary}}; }
+
+QPushButton[role="secondary"] {
+    background: {{card}}; color: {{text}}; border: 1px solid {{border}};
+}
+QPushButton[role="secondary"]:hover { background: {{surface}}; border-color: {{focus_ring}}; }
+QPushButton[role="secondary"]:pressed { background: {{border}}; }
+
+QPushButton[role="danger"] { background: {{danger}}; }
+QPushButton[role="danger"]:hover { background: {{danger_hover}}; }
+
+QPushButton[role="ghost"] {
+    background: transparent; color: {{text_secondary}}; border: 1px solid transparent;
+}
+QPushButton[role="ghost"]:hover { color: {{text}}; background: {{surface}}; }
+
+/* 依据出处引用块：暖底 + 发丝边，不抢主色；错误红只留给「必须处理」 */
+QPushButton[role="evidence"] {
+    background: {{quote_bg}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+    text-align: left;
+    padding: {{space_2}}px {{space_3}}px;
+    min-height: {{control_height}}px;
+}
+QPushButton[role="evidence"]:hover { border-color: {{focus_ring}}; }
+QPushButton[role="evidence"]:disabled { background: {{surface}}; color: {{placeholder}}; }
+
+/* ---------- 表单控件 ---------- */
+QLineEdit, QTextEdit {
+    background: {{card}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+    padding: {{space_1}}px {{space_2}}px;
+    min-height: {{control_height}}px;
+    selection-background-color: {{primary}};
+    selection-color: {{on_primary}};
+}
+QLineEdit:focus, QTextEdit:focus { border: 2px solid {{focus_ring}}; padding: 0px {{space_1}}px; }
+QLineEdit:disabled, QTextEdit:disabled { background: {{surface}}; color: {{text_secondary}}; }
+QLineEdit::placeholder { color: {{placeholder}}; }
+
+QComboBox {
+    background: {{card}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+    padding: {{space_1}}px {{space_2}}px;
+    min-height: {{control_height}}px;
+}
+QComboBox:hover { border-color: {{focus_ring}}; }
+QComboBox:focus { border: 2px solid {{focus_ring}}; padding: 0px {{space_1}}px; }
+/* 下拉箭头不重画：QSS 一旦给 ::drop-down 设 border，Qt 就不再画原生箭头
+   （实测箭头消失），下拉 affordance 会丢。这里只留原生箭头，由 QComboBox 的
+   padding 保证箭头不被内容挤到。 */
+QComboBox QAbstractItemView {
+    background: {{card}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    selection-background-color: {{primary}};
+    selection-color: {{on_primary}};
+}
+
+/* ---------- 表格：一屏主角，密度优先 ---------- */
+QTableView {
+    background: {{card}};
+    alternate-background-color: {{surface}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+    gridline-color: {{border}};
+    selection-background-color: {{primary}};
+    selection-color: {{on_primary}};
+    font-size: {{font_sm}}px;
+}
+QTableView:focus { border: 2px solid {{focus_ring}}; }
+QTableView::item { padding: {{space_1}}px {{space_2}}px; }
+QTableView::item:selected { background: {{primary}}; color: {{on_primary}}; }
+
+QHeaderView {
+    background: {{surface}};
+    border: none;
+}
+QHeaderView::section {
+    background: {{surface}};
+    color: {{text_secondary}};
+    border: none;
+    border-bottom: 1px solid {{border}};
+    padding: {{space_2}}px;
+    font-size: {{font_sm}}px;
+    font-weight: 500;
+}
+QHeaderView::section:hover { color: {{text}}; }
+QHeaderView::down-arrow, QHeaderView::up-arrow { width: {{space_3}}px; height: {{space_3}}px; }
+
+/* ---------- 页签 ---------- */
+QTabBar::tab {
+    background: transparent;
+    color: {{text_secondary}};
+    padding: {{space_2}}px {{space_4}}px;
+    border-bottom: 2px solid transparent;
+}
+QTabBar::tab:selected { color: {{primary}}; border-bottom-color: {{primary}}; font-weight: 500; }
+QTabBar::tab:hover { color: {{text}}; }
+QTabBar::tab:focus { color: {{primary}}; border-bottom-color: {{focus_ring}}; }
+
+/* ---------- 滚动条 ---------- */
+QScrollBar:vertical { background: {{surface}}; width: {{space_3}}px; margin: 0; }
+QScrollBar::handle:vertical {
+    background: {{border}}; border-radius: {{space_1}}px; min-height: {{space_6}}px;
+}
+QScrollBar::handle:vertical:hover { background: {{text_secondary}}; }
+QScrollBar:horizontal { background: {{surface}}; height: {{space_3}}px; margin: 0; }
+QScrollBar::handle:horizontal {
+    background: {{border}}; border-radius: {{space_1}}px; min-width: {{space_6}}px;
+}
+QScrollBar::handle:horizontal:hover { background: {{text_secondary}}; }
+QScrollBar::add-line, QScrollBar::sub-line { height: 0; width: 0; }
+QScrollBar::add-page, QScrollBar::sub-page { background: transparent; }
+
+/* ---------- 转写区（逐句追加） ---------- */
+QListWidget {
+    background: {{card}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+    padding: {{space_1}}px;
+    font-size: {{font_sm}}px;
+}
+QListWidget::item { padding: {{space_1}}px {{space_2}}px; border-radius: {{radius}}px; }
+QListWidget::item:selected { background: {{surface}}; color: {{text}}; }
+QListWidget::item:hover { background: {{surface}}; }
+
+/* ---------- 分组框 ---------- */
+QGroupBox {
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+    margin-top: {{space_4}}px;
+    padding-top: {{space_2}}px;
+    font-weight: 500;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: {{space_3}}px;
+    padding: 0 {{space_1}}px;
+    color: {{text_secondary}};
+}
+
+/* ---------- 分割条 ---------- */
+QSplitter::handle { background: {{border}}; }
+QSplitter::handle:hover { background: {{focus_ring}}; }
+QSplitter::handle:horizontal { width: 1px; }
+QSplitter::handle:vertical { height: 1px; }
+
+/* ---------- 提示条 / 工具提示 ---------- */
+QToolTip {
+    background: {{text}};
+    color: {{card}};
+    border: none;
+    border-radius: {{radius}}px;
+    padding: {{space_2}}px;
+    font-size: {{font_sm}}px;
+}
+
+/* ---------- 勾选框 ---------- */
+QCheckBox { spacing: {{space_2}}px; }
+QCheckBox::indicator {
+    width: 16px; height: 16px;
+    border: 1px solid {{border}};
+    border-radius: 3px;
+    background: {{card}};
+}
+QCheckBox::indicator:hover { border-color: {{focus_ring}}; }
+QCheckBox::indicator:focus { border: 2px solid {{focus_ring}}; }
+QCheckBox::indicator:checked { background: {{primary}}; border-color: {{primary}}; }
+
+/* ---------- 进度条 ---------- */
+QProgressBar {
+    background: {{card}};
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+    text-align: center;
+    min-height: 20px;
+    font-size: {{font_sm}}px;
+}
+QProgressBar::chunk { background: {{primary}}; border-radius: {{radius}}px; }
+
+/* ---------- 文字层级与角色 ---------- */
+QLabel { background: transparent; }
+QLabel[role="section-title"] {
+    color: {{text_secondary}};
+    font-size: {{font_xs}}px;
+    font-weight: 500;
+    padding: {{space_1}}px 0;
+}
+QLabel[role="title"] {
+    color: {{text}};
+    font-size: {{font_lg}}px;
+    font-weight: 600;
+}
+QLabel[role="secondary"] { color: {{text_secondary}}; font-size: {{font_sm}}px; }
+QLabel[role="hint"] { color: {{text_secondary}}; font-size: {{font_sm}}px; }
+/* 表单 label：常驻在控件上方，不用 placeholder 当 label */
+QLabel[role="field-label"] { color: {{text_secondary}}; font-size: {{font_sm}}px; font-weight: 500; }
+/* 就近错误提示：写清「错在哪、怎么改」，不只标红 */
+QLabel[role="field-error"] { color: {{danger}}; font-size: {{font_sm}}px; }
+QLabel[role="empty-title"] { color: {{text}}; font-size: {{font_lg}}px; font-weight: 600; }
+QLabel[role="empty-hint"] { color: {{text_secondary}}; font-size: {{font_sm}}px; }
+QLabel[role="error-code"] { color: {{danger}}; font-size: {{font_sm}}px; font-weight: 600; }
+QLabel[role="error-msg"] { color: {{text}}; font-size: {{font_base}}px; }
+QLabel[role="status"] { color: {{text_secondary}}; font-size: {{font_sm}}px; }
+QLabel[role="status"][alert="true"] { color: {{danger}}; font-weight: 600; }
+
+/* ---------- 状态栏 / 菜单 / 托盘 ---------- */
+QStatusBar { background: {{surface}}; color: {{text_secondary}}; font-size: {{font_sm}}px; }
+QStatusBar::item { border: none; }
+QMenu {
+    background: {{card}};
+    color: {{text}};
+    border: 1px solid {{border}};
+    border-radius: {{radius}}px;
+    padding: {{space_1}}px;
+}
+QMenu::item { padding: {{space_2}}px {{space_4}}px; border-radius: {{radius}}px; }
+QMenu::item:selected { background: {{surface}}; color: {{text}}; }
+QMenu::separator { height: 1px; background: {{border}}; margin: {{space_1}}px {{space_2}}px; }

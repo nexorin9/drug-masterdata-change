@@ -1,0 +1,23 @@
+{
+  "case_id": 2,
+  "audio_file": "case_002.wav",
+  "speaker_segments": [
+    {
+      "text": "头孢克肟片规格说错了，应该是0.2克",
+      "start": 1000,
+      "end": 9000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0003N00300030003E0003",
+    "generic_ref": "头孢克肟片",
+    "field_name": "spec_pack_code",
+    "cur_value": "0.1g",
+    "proposed_value": "0.2g",
+    "evidence_index": 0,
+    "ambiguous": false,
+    "unresolved_speaker": false
+  },
+  "notes": "说错了应该是"
+}

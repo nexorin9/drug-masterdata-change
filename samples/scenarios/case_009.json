@@ -1,0 +1,34 @@
+{
+  "case_id": 9,
+  "audio_file": "case_009.wav",
+  "speaker_segments": [
+    {
+      "text": "规格是0.1克",
+      "start": 0,
+      "end": 3000,
+      "speaker": "spk1"
+    },
+    {
+      "text": "等一下，插一句",
+      "start": 2000,
+      "end": 3500,
+      "speaker": "spk2"
+    },
+    {
+      "text": "结论是改成0.2克",
+      "start": 4000,
+      "end": 9000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0003N00300030003E0003",
+    "generic_ref": "",
+    "field_name": "spec_pack_code",
+    "cur_value": "0.1g",
+    "proposed_value": "0.2g",
+    "evidence_index": 2,
+    "ambiguous": false
+  },
+  "notes": "多人插话"
+}

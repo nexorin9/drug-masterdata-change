@@ -1,0 +1,29 @@
+{
+  "case_id": 7,
+  "audio_file": "case_007.wav",
+  "speaker_segments": [
+    {
+      "text": "喂你好，今天天气不错",
+      "start": 0,
+      "end": 3000,
+      "speaker": "spk1"
+    },
+    {
+      "text": "这个药名字写错了，头孢克肟写成头孢克洛了",
+      "start": 9000,
+      "end": 16000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0003N00300030003E0003",
+    "generic_ref": "头孢克肟片",
+    "field_name": "name_code",
+    "cur_value": "头孢克肟",
+    "proposed_value": "头孢克洛",
+    "evidence_index": 1,
+    "ambiguous": false,
+    "unresolved_speaker": false
+  },
+  "notes": "寒暄干扰+结论在后"
+}

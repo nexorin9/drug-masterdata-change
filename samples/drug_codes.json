@@ -1,0 +1,29 @@
+{
+  "valid": [
+    "XC0001N00100010001E0001",
+    "XC0099N09900990099E0099"
+  ],
+  "invalid": [
+    {
+      "code": "XC0001N001",
+      "seg": "length"
+    },
+    {
+      "code": "ZC0001N00100010001E0001",
+      "seg": "identifier"
+    },
+    {
+      "code": "X12@34N00100010001E0001",
+      "seg": "category"
+    },
+    {
+      "code": "XC0001N00112A40001E0001",
+      "seg": "dosage_form"
+    },
+    {
+      "code": "XC0001N00100010001E0001 ",
+      "seg": "space"
+    }
+  ],
+  "rule_signature": "identifier:0-1:A:X|category:1-6:AN:|name:6-10:AN:|dosage_form:10-14:N:|spec_pack:14-18:N:|enterprise:18-23:AN:"
+}

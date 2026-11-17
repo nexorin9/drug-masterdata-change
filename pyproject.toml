@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drug-masterdata-change"
+version = "0.1.0"
+description = "药品主数据变更听写系统：把一次口头药品目录核实压成带原话出处的变更条目，经双人复核写回主数据系统"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ChaosForge" }]
+keywords = ["hospital", "master-data", "pharmacy", "speech-recognition", "desktop"]
+
+# 单机安装，无服务端组件
+dependencies = [
+    "funasr>=1.1.0",
+    "torch>=2.1.0",
+    "torchaudio>=2.1.0",
+    "PySide6>=6.6.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.6.0",
+    "soundfile>=0.12.1",
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "pytest-timeout>=2.3.0"]
+
+[project.scripts]
+dmchange = "dmchange.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+timeout = 120
+# 沙箱环境下系统 shim 会拦截 pytest 默认 tmp 目录，固定到项目内相对目录
+addopts = "--basetemp=.pytest_tmp"
+filterwarnings = ["ignore::DeprecationWarning"]

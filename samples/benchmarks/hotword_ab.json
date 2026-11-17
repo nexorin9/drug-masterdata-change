@@ -1,0 +1,86 @@
+{
+  "config": {
+    "on": {},
+    "off": {}
+  },
+  "on": {
+    "n": 8,
+    "hits": 7,
+    "hit_rate": 0.875,
+    "detail": [
+      {
+        "id": 0,
+        "hit": true
+      },
+      {
+        "id": 1,
+        "hit": true
+      },
+      {
+        "id": 2,
+        "hit": true
+      },
+      {
+        "id": 3,
+        "hit": true
+      },
+      {
+        "id": 4,
+        "hit": true
+      },
+      {
+        "id": 5,
+        "hit": true
+      },
+      {
+        "id": 6,
+        "hit": true
+      },
+      {
+        "id": 7,
+        "hit": true
+      }
+    ],
+    "elapsed_ms": 3200
+  },
+  "off": {
+    "n": 8,
+    "hits": 4,
+    "hit_rate": 0.5,
+    "detail": [
+      {
+        "id": 0,
+        "hit": true
+      },
+      {
+        "id": 1,
+        "hit": true
+      },
+      {
+        "id": 2,
+        "hit": true
+      },
+      {
+        "id": 3,
+        "hit": true
+      },
+      {
+        "id": 4,
+        "hit": false
+      },
+      {
+        "id": 5,
+        "hit": false
+      },
+      {
+        "id": 6,
+        "hit": false
+      },
+      {
+        "id": 7,
+        "hit": false
+      }
+    ],
+    "elapsed_ms": 3100
+  }
+}

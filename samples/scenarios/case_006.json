@@ -1,0 +1,23 @@
+{
+  "case_id": 6,
+  "audio_file": "case_006.wav",
+  "speaker_segments": [
+    {
+      "text": "维生素C片规格改为一个非常非常长的新规格描述内容需要完整保留原文",
+      "start": 1000,
+      "end": 15000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "",
+    "generic_ref": "维生素C片",
+    "field_name": "spec_pack_code",
+    "cur_value": "0.1g",
+    "proposed_value": "很长很长的规格字段内容很长很长的规格字段内容很长很长的规格字段内容很长很长的规格字段内容很长很长的规格字段内容很长很长的规格字段内容",
+    "evidence_index": 0,
+    "ambiguous": false,
+    "unresolved_speaker": false
+  },
+  "notes": "超长字段"
+}

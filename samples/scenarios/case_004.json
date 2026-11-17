@@ -1,0 +1,23 @@
+{
+  "case_id": 4,
+  "audio_file": "case_004.wav",
+  "speaker_segments": [
+    {
+      "text": "那个就是说二甲双胍片，对对对，规格从0.5改成0.85",
+      "start": 1000,
+      "end": 11000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0004N00400040004E0004",
+    "generic_ref": "二甲双胍片",
+    "field_name": "spec_pack_code",
+    "cur_value": "0.5g",
+    "proposed_value": "0.85g",
+    "evidence_index": 0,
+    "ambiguous": false,
+    "unresolved_speaker": false
+  },
+  "notes": "寒暄口水词干扰"
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": 12,
+  "audio_file": "case_012.wav",
+  "speaker_segments": [
+    {
+      "text": "阿莫西林和阿莫西林颗粒，先核实的这个",
+      "start": 0,
+      "end": 9000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "",
+    "generic_ref": "阿莫西林胶囊颗粒",
+    "field_name": "name_code",
+    "cur_value": "",
+    "proposed_value": "",
+    "evidence_index": 0,
+    "ambiguous": true
+  },
+  "notes": "近音药名（目录无此名，不得硬匹配到错误码）"
+}

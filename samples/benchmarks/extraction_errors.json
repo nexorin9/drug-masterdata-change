@@ -1,0 +1,71 @@
+{
+  "total_elements": 60,
+  "by_category": {
+    "wrong_drug": {
+      "count": 1,
+      "ratio": 0.017,
+      "examples": [
+        {
+          "expect": "期望wrong_drug",
+          "actual": "实际wrong_drug",
+          "clue": "判据句"
+        }
+      ]
+    },
+    "wrong_field": {
+      "count": 2,
+      "ratio": 0.033,
+      "examples": [
+        {
+          "expect": "期望wrong_field",
+          "actual": "实际wrong_field",
+          "clue": "判据句"
+        }
+      ]
+    },
+    "direction_flip": {
+      "count": 3,
+      "ratio": 0.05,
+      "examples": [
+        {
+          "expect": "期望direction_flip",
+          "actual": "实际direction_flip",
+          "clue": "判据句"
+        }
+      ]
+    },
+    "value_missing": {
+      "count": 4,
+      "ratio": 0.067,
+      "examples": [
+        {
+          "expect": "期望value_missing",
+          "actual": "实际value_missing",
+          "clue": "判据句"
+        }
+      ]
+    },
+    "evidence_wrong": {
+      "count": 5,
+      "ratio": 0.083,
+      "examples": [
+        {
+          "expect": "期望evidence_wrong",
+          "actual": "实际evidence_wrong",
+          "clue": "判据句"
+        }
+      ]
+    },
+    "extra_element": {
+      "count": 6,
+      "ratio": 0.1,
+      "examples": [
+        {
+          "expect": "期望extra_element",
+          "actual": "实际extra_element",
+          "clue": "判据句"
+        }
+      ]
+    }
+  }
+}

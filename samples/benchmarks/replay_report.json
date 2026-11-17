@@ -1,0 +1,210 @@
+{
+  "total": 12,
+  "hits": 12,
+  "hit_rate": 1.0,
+  "detail": [
+    {
+      "case": "case_001",
+      "label": "否定式纠正（通用名唯一）",
+      "expected": {
+        "drug_code": "XC0014N01400140014E0014",
+        "generic_ref": "恩替卡韦片",
+        "field_name": "spec_pack_code",
+        "cur_value": "0.5mg",
+        "proposed_value": "1mg",
+        "evidence_index": 2,
+        "ambiguous": false,
+        "unresolved_speaker": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_002",
+      "label": "说错了应该是",
+      "expected": {
+        "drug_code": "XC0003N00300030003E0003",
+        "generic_ref": "头孢克肟片",
+        "field_name": "spec_pack_code",
+        "cur_value": "0.1g",
+        "proposed_value": "0.2g",
+        "evidence_index": 0,
+        "ambiguous": false,
+        "unresolved_speaker": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_003",
+      "label": "通用名多命中歧义",
+      "expected": {
+        "drug_code": "XC0001N00100010001E0001",
+        "generic_ref": "阿莫西林胶囊",
+        "field_name": "dosage_form_code",
+        "cur_value": "胶囊",
+        "proposed_value": "片剂",
+        "evidence_index": 0,
+        "ambiguous": true,
+        "unresolved_speaker": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "dictionary"
+    },
+    {
+      "case": "case_004",
+      "label": "寒暄口水词干扰",
+      "expected": {
+        "drug_code": "XC0004N00400040004E0004",
+        "generic_ref": "二甲双胍片",
+        "field_name": "spec_pack_code",
+        "cur_value": "0.5g",
+        "proposed_value": "0.85g",
+        "evidence_index": 0,
+        "ambiguous": false,
+        "unresolved_speaker": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_005",
+      "label": "厂家变更",
+      "expected": {
+        "drug_code": "XC0005N00500050005E0005",
+        "generic_ref": "阿托伐他汀钙片",
+        "field_name": "enterprise_code",
+        "cur_value": "辉瑞",
+        "proposed_value": "乐普",
+        "evidence_index": 0,
+        "ambiguous": false,
+        "unresolved_speaker": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_006",
+      "label": "超长字段",
+      "expected": {
+        "drug_code": "",
+        "generic_ref": "维生素C片",
+        "field_name": "spec_pack_code",
+        "cur_value": "0.1g",
+        "proposed_value": "很长很长的规格字段内容很长很长的规格字段内容很长很长的规格字段内容很长很长的规格字段内容很长很长的规格字段内容很长很长的规格字段内容",
+        "evidence_index": 0,
+        "ambiguous": false,
+        "unresolved_speaker": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_007",
+      "label": "寒暄干扰+结论在后",
+      "expected": {
+        "drug_code": "XC0003N00300030003E0003",
+        "generic_ref": "头孢克肟片",
+        "field_name": "name_code",
+        "cur_value": "头孢克肟",
+        "proposed_value": "头孢克洛",
+        "evidence_index": 1,
+        "ambiguous": false,
+        "unresolved_speaker": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_008",
+      "label": "说话人未分离",
+      "expected": {
+        "drug_code": "XC0004N00400040004E0004",
+        "generic_ref": "二甲双胍片",
+        "field_name": "spec_pack_code",
+        "cur_value": "0.5g",
+        "proposed_value": "1.0g",
+        "evidence_index": 0,
+        "ambiguous": false,
+        "unresolved_speaker": true
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_009",
+      "label": "多人插话",
+      "expected": {
+        "drug_code": "XC0003N00300030003E0003",
+        "generic_ref": "",
+        "field_name": "spec_pack_code",
+        "cur_value": "0.1g",
+        "proposed_value": "0.2g",
+        "evidence_index": 2,
+        "ambiguous": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_010",
+      "label": "背景噪声",
+      "expected": {
+        "drug_code": "XC0004N00400040004E0004",
+        "generic_ref": "",
+        "field_name": "spec_pack_code",
+        "cur_value": "0.5g",
+        "proposed_value": "1.0g",
+        "evidence_index": 0,
+        "ambiguous": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_011",
+      "label": "连续两次纠正",
+      "expected": {
+        "drug_code": "XC0005N00500050005E0005",
+        "generic_ref": "",
+        "field_name": "spec_pack_code",
+        "cur_value": "20mg",
+        "proposed_value": "40mg",
+        "evidence_index": 1,
+        "ambiguous": false
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "ok"
+    },
+    {
+      "case": "case_012",
+      "label": "近音药名（目录无此名，不得硬匹配到错误码）",
+      "expected": {
+        "drug_code": "",
+        "generic_ref": "阿莫西林胶囊颗粒",
+        "field_name": "name_code",
+        "cur_value": "",
+        "proposed_value": "",
+        "evidence_index": 0,
+        "ambiguous": true
+      },
+      "hit": true,
+      "failure": "",
+      "guard_layer": "dictionary"
+    }
+  ],
+  "failure_distribution": {
+    "none": 0
+  }
+}

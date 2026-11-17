@@ -1,0 +1,23 @@
+{
+  "case_id": 8,
+  "audio_file": "case_008.wav",
+  "speaker_segments": [
+    {
+      "text": "二甲双胍片规格不是0.5，是1.0",
+      "start": 1000,
+      "end": 8000,
+      "speaker": null
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0004N00400040004E0004",
+    "generic_ref": "二甲双胍片",
+    "field_name": "spec_pack_code",
+    "cur_value": "0.5g",
+    "proposed_value": "1.0g",
+    "evidence_index": 0,
+    "ambiguous": false,
+    "unresolved_speaker": true
+  },
+  "notes": "说话人未分离"
+}

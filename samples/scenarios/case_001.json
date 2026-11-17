@@ -1,0 +1,35 @@
+{
+  "case_id": 1,
+  "audio_file": "case_001.wav",
+  "speaker_segments": [
+    {
+      "text": "喂，是药学部吗",
+      "start": 0,
+      "end": 2000,
+      "speaker": "spk1"
+    },
+    {
+      "text": "对，现在核实一下",
+      "start": 2000,
+      "end": 4000,
+      "speaker": "spk0"
+    },
+    {
+      "text": "恩替卡韦片的规格不是0.5毫克，是1毫克",
+      "start": 8000,
+      "end": 15000,
+      "speaker": "spk0"
+    }
+  ],
+  "expect": {
+    "drug_code": "XC0014N01400140014E0014",
+    "generic_ref": "恩替卡韦片",
+    "field_name": "spec_pack_code",
+    "cur_value": "0.5mg",
+    "proposed_value": "1mg",
+    "evidence_index": 2,
+    "ambiguous": false,
+    "unresolved_speaker": false
+  },
+  "notes": "否定式纠正（通用名唯一）"
+}
